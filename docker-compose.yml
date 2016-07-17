@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  app:
+    image: node
+    working_dir: /usr/src/app
+    command: ./app.sh
+    restart: always
+    volumes:
+      - "./app:/usr/src/app"
+    ports:
+      - "5555:5555"
+    environment:
+      - SHELL=/bin/bash
+      - DBNAME=checkers-dev-db
+      - LEVEL=silly
+      - PORT=5555
+
+  db:
+    image: mongo
+    volumes:
+      - "./data:/data/db"
+    ports:
+      - "27017:27017"
