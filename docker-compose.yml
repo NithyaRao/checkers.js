@@ -10,6 +10,7 @@ services:
       - "./app:/usr/src/app"
     ports:
       - "5555:5555"
+      - "5858:5858"
     environment:
       - SHELL=/bin/bash
       - DBNAME=checkers-dev-db
