@@ -9,6 +9,18 @@
             "port": 5858,
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/app/dst"
+        },
+        {
+            "name": "Attach to Docker",
+            "type": "node",
+            "request": "attach",
+            "port": 5858,
+            "address": "localhost",
+            "restart": false,
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/app/dst",
+            "localRoot": "${workspaceRoot}/app",
+            "remoteRoot": "/usr/src/app"
         }
     ]
 }
