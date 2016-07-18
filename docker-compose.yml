@@ -23,3 +23,16 @@ services:
       - "./data:/data/db"
     ports:
       - "27017:27017"
+
+  test:
+    image: node
+    working_dir: /usr/src/app
+    command: ./app-test.sh
+    restart: always
+    volumes:
+      - "./app:/usr/src/app"
+    environment:
+      - SHELL=/bin/bash
+      - DBNAME=checkers-test-db
+      - LEVEL=silly
+      - PORT=5555
