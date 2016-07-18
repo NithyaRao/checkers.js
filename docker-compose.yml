@@ -2,7 +2,7 @@ version: '2'
 
 services:
   app:
-    image: chyld/nexgen:1.0.0
+    image: chyld/nexgen:1.0.1
     restart: always
     volumes:
       - "./app:/usr/src/app"
