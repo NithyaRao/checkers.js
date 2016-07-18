@@ -10,4 +10,4 @@ setup:
 compile:
 	echo [+++compile+++]
 	$(BIN)/webpack
-	$(BIN)/babel server -d dst -q
+	$(BIN)/babel server -d dst
